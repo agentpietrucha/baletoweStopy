@@ -1,0 +1,286 @@
+body, html{
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+header{
+  display: flex;
+  justify-content: center;
+  height: 10vh;
+  margin-bottom: 25px;
+}
+header img{
+  position: relative;
+  height: auto;
+  object-fit: contain;
+}
+.mainContainer{
+  width: 75vw;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  border-radius: 2px;
+    background: #ec3f9a0d;
+}
+.headText{
+  /*font-family: 'Poppins', sans-serif;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.headText h1{
+  /*font-family: 'Poppins', sans-serif;*/
+  font-weight: normal;
+  color: #707070;
+  letter-spacing: 9px;
+}
+.headText .boldPink{
+  color: #EA2C90;
+  font-weight: bold;
+}
+.headText h4{
+  margin-top: 0;
+  color: #707070;
+  font-weight: normal;
+}
+.listContainer{
+
+}
+.listContainer ol{
+  list-style: none;
+  counter-reset: item;
+}
+.listContainer ol li{
+  counter-increment: item;
+  color: #707070;
+  display: flex;
+  margin-bottom: 75px;
+  position: relative;
+  margin-left: 30px;
+}
+.listContainer ol li:before{
+  content: counter(item);
+  border-radius: 100%;
+  background: transparent;
+  border: 1px solid #707070;;
+  width: 3vw;
+  height: 3vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -26px;
+}
+.listContainer input{
+  outline: none;
+  border: 1px solid #ababab;
+  border-radius: 2px;
+}
+.listContainer input:focus{
+  border-color: #000;
+}
+.listContainer label:after{
+  content: "*";
+  color: red;
+  position: absolute;
+}
+.infoContainer{
+  margin-left: 3vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.infoContainer img{
+  max-width: 512px;
+  max-height: 512px;
+}
+.leftContainer{
+
+}
+.rightContainer{
+  margin-right: 10vw;
+}
+/*.choosePhotoButton{
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  padding: 7px;
+  letter-spacing: 2px;
+  background: transparent;
+  border: 2px solid #707070;
+  color: #707070;
+  border-radius: 2px;
+  transition: .2s box-shadow;
+}
+.choosePhotoButton:hover{
+  color: #EA2C90;
+  border-color: #000;
+  cursor: pointer;
+  box-shadow: 1px 2px 0px 1px black;
+}
+.choosePhotoButton:active{
+  transition: unset;
+  color: blue;
+  box-shadow: none;
+  margin-top: 2px;
+  margin-right: -1px;
+}*/
+.inputsContainer{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  bottom: 13px;
+}
+.rightFootContainer, .leftFootContainer{
+  display: flex;
+  flex-direction: column;
+  margin-right: 10vw;
+}
+.rightFootContainer label, .leftFootContainer label{
+  font-size: smaller;
+  letter-spacing: 2px;
+}
+.rightFootContainer input, .leftFootContainer input{
+  height: 24px;
+  /*outline: none;
+  border: 1px solid #ababab;
+  border-radius: 2px;*/
+}
+.rightFootContainer input:focus, .leftFootContainer input:focus{
+  border-color: #000;
+}
+.point6{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.point6 p:after{
+  content: "*";
+  color: red;
+  position: absolute;
+}
+.point6 input{
+  margin: 0px;
+  height: 150px;
+  max-width: 85%;
+  width: 85%;
+  resize: none;
+}
+.clientDataContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.clientDataContainer p{
+  margin-bottom: 30px;
+}
+.clientDataContainer label{
+  font-size: smaller;
+  letter-spacing: 2px; 
+}
+.clientDataContainer input{
+  margin-bottom: 15px;
+  height: 24px;
+  width: 25vw;
+}
+.clientDataContainer input:focus{
+  /*border-color: #000;*/
+}
+.rodo{
+  display: flex;
+  align-items: center;
+}
+.rodo input{
+  width: 24px;
+  margin: 0 10px 0 0;
+}
+.sendButtonContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+.sendButtonContainer button{
+  transition: .2s box-shadow;
+  width: 60%;
+  height: 45px;
+  background: #707070;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: large;
+  letter-spacing: 2px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+}
+.sendButtonContainer button:hover{
+  box-shadow: 3px 4px 0px 1px black;
+  cursor: pointer;
+  background: #EA2C90;
+}
+.sendButtonContainer button:active{
+  transition: unset;
+  box-shadow: none;
+  margin-top: 3px;
+  margin-left: 4px;
+  color: blue;
+}
+.rightContainer input{
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+@media only screen and (max-width: 600px){
+  .rightFootContainer, .leftFootContainer{
+    margin-right: 7vw;
+  }
+  .infoContainer{
+    flex-direction: column;
+  }
+  .mainContainer{
+    width: 87vw;
+    padding: 3vw;
+  }
+  .mainContainer ol{
+    padding: 0;
+  }
+  .mainContainer ol li{
+    width: 100%;
+    flex-direction: column;
+    margin-left: 0px;
+  }
+  .listContainer ol li:before{
+    width: 6vw;
+    height: 6vw;
+    position: relative;
+    left: unset;
+  }
+  .infoContainer{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+  }
+  .infoContainer img{
+    max-height: 256px;
+    max-width: 256px;
+  }
+  .sendButtonContainer button:active{
+    transition: unset;
+    box-shadow: none;
+    color: blue;
+    margin: 0;
+    }
+    .sendButtonContainer button:hover{
+      box-shadow: unset;
+    }
+    li:last-child input{
+      width: 75vw;
+    }
+    li:last-child .rodo input{
+      width: auto;
+    }
+}

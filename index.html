@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>stopy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./index.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <img src="./resources/baletowe_logo.jpg">
+  </header>
+  <main class="mainContainer">
+    <div class="headText">
+      <h1><span class="boldPink">Fitting online</span> - służymy pomocą</h1>
+      <h4>Aby uzyskać naszą pomoc w doborze odpowiedniego rozmiaru wypełnij poniższy formularz:</h4>
+    </div>
+    <div class="listContainer">
+      <ol>
+        <li class="li1">
+          <div class="infoContainer">
+            <div class="leftContainer">
+              <p>zdjęcię stóp - widok z <span style="font-weight: bold;">góry</span></p>
+              <img id="aboveImage" src="./resources/stopy.png">
+            </div>
+            <div class="rightContainer">
+              <!-- <button id="footAbove" class="choosePhotoButton">Wybierz zdjęcie</button> -->
+              <form action="/upload" method="post" id="aboveImageForm">
+                <input type="file" name="footAboveImage" id="footAboveImage" class="choosePhotoButton">
+              </form>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="infoContainer">
+            <div class="leftContainer">
+              <p>zdjęcię stóp - widok z <span style="font-weight: bold;">boku</span></p>
+              <img id="sideImage" src="./resources/stopy-bok.png">
+            </div>
+            <div class="rightContainer">
+              <!-- <button id="footSide" class="choosePhotoButton">Wybierz zdjęcie</button> -->
+              <input type="file" name="footSideImage" id="footSideImage" class="choosePhotoButton">
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="infoContainer">
+            <p>Podaj długość stóp w cm:</p>
+            <div class="inputsContainer">
+              <div class="leftFootContainer">
+                <label for="leftHeight">lewa</label>
+                <input type="number" name="leftHeight" id="leftHeight">
+              </div>
+              <div class="rightFootContainer">
+                <label for="rightHeight">prawa</label>
+                <input type="number" name="rightHeight" id="rightHeight">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="infoContainer">
+            <p>Podaj szerokość stóp w cm:</p>
+            <div class="inputsContainer">
+              <div class="leftFootContainer">
+                <label for="leftWidth">lewa</label>
+                <input type="number" name="leftWidth" id="leftWidth">
+              </div>
+              <div class="rightFootContainer">
+                <label for="rightWidth">prawa</label>
+                <input type="number" name="rightWidth" id="rightWidth">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="infoContainer">
+            <p>Podaj obwód stóp w cm:</p>
+            <div class="inputsContainer">
+              <div class="leftFootContainer">
+                <label for="leftPerim">lewa</label>
+                <input type="number" name="leftPerim" id="leftPerim">
+              </div>
+              <div class="rightFootContainer">
+                <label for="rightPerim">prawa</label>
+                <input type="number" name="rightPerim" id="rightPerim">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="point6 infoContainer">
+            <p>Jakim obuwiem jesteś zainteresowany/a? Podaj rodzaj obuwia lub nazwę wybranego modelu:</p>
+            <input type="text" id="producerName" class="producerNameArea"></input>
+          </div>
+        </li>
+        <li>
+          <div class="infoContainer clientDataContainer">
+            <p>Dane:</p>
+            <label for="nameAndSurname">Imię i nazwisko</label>
+            <input type="text" name="nameAndSurname" id="nameAndSurname">
+            <label for="age">Wiek</label>
+            <input type="number" name="age" id="age">
+            <label for="telephone">Numer telefonu</label>
+            <input type="number" name="telephone" id="telephone">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <div class="rodo">
+              <input type="checkbox" name="rodoCheck" id="rodoCheck">
+              <label for="rodoCheck">Zgadzam się na przetwarzanie moich danych stopowych. <a href="https://sklepbaletowy.pl/content/6-polityka-prywatnosci" target="_blank">Regulamin</a></label>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <div class="sendButtonContainer">
+      <button id="send">Wyślij</button>
+    </div>
+  </main>
+
+  <script type="text/javascript" src="./main.js"></script>
+</body>
+</html>
